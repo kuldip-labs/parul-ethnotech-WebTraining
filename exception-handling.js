@@ -12,6 +12,7 @@ try {
 }
 
 // example 2. The throw Statement
+// Sometimes, you want to create your own errors based on business logic (e.g., a user entering a negative age). You can use the throw keyword to trigger the catch block manually
 
 function checkAge(age) {
   if (age < 0) {
@@ -27,6 +28,7 @@ try {
 }
 
 // Async errors
+// In modern JavaScript, we often use async/await. To handle errors in these functions, the syntax remains the same:
 
 async function fetchData() {
   try {
