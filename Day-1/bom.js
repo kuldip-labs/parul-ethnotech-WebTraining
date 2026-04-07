@@ -3,24 +3,24 @@
 
 // Brocken code
 // GOAL: Ask name, confirm entry, and check screen width.
-function initializeApp() {
-  let userName = window.promp("What is your name?"); // Error 1
+// function initializeApp() {
+//   let userName = window.promp("What is your name?"); // Error 1
 
-  if (userName) {
-    let isSure = confirm("Are you sure " + userName + " is correct?");
+//   if (userName) {
+//     let isSure = confirm("Are you sure " + userName + " is correct?");
 
-    if (isSure) {
-      alert("Welcome, " + userName);
-    }
-  }
+//     if (isSure) {
+//       alert("Welcome, " + userName);
+//     }
+//   }
 
-  // Check if screen width is at least 1024px
-  if (window.screen - width >= 1024) { // Error 2
-    console.log("High-res mode active");
-  } else {
-    console.log("Mobile mode active");
-  }
-}
+//   // Check if screen width is at least 1024px
+//   if (window.screen - width >= 1024) { // Error 2
+//     console.log("High-res mode active");
+//   } else {
+//     console.log("Mobile mode active");
+//   }
+// }
 
 /* 
 The Debugging Process
