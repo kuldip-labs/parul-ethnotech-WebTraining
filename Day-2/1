@@ -1,0 +1,141 @@
+✅ Number
+
+Represents both integers and floating-point values.
+
+let a = 10;
+let b = 3.14;
+
+console.log(typeof a); // "number"
+✅ Boolean
+
+Represents true or false.
+
+let isActive = true;
+console.log(typeof isActive); // "boolean"
+✅ String
+
+Sequence of characters.
+
+let name = "Kuldip";
+let city = 'Ahmedabad';
+
+console.log(typeof name); // "string"
+✅ null
+
+Represents intentional absence of value.
+
+let data = null;
+console.log(data);        // null
+console.log(typeof data); // "object" (JavaScript bug)
+✅ undefined
+
+Variable declared but not assigned.
+
+let x;
+console.log(x); // undefined
+🔹 2. typeof Operator
+
+Used to check data type.
+
+console.log(typeof 10);        // number
+console.log(typeof "Hello");   // string
+console.log(typeof true);      // boolean
+console.log(typeof undefined); // undefined
+🔹 3. Type-Checking Functions
+Common checks:
+Array.isArray([1, 2, 3]); // true
+
+isNaN("abc"); // true (Not a Number)
+
+Number.isInteger(10); // true
+🔹 4. "use strict"
+
+Enforces stricter parsing and error handling.
+
+"use strict";
+
+x = 10; // ❌ Error (must declare variable)
+
+Benefits:
+
+Prevents accidental globals
+Safer code
+Helps debugging
+🔹 5. Type Conversion
+parseInt()
+parseInt("100");     // 100
+parseInt("100px");   // 100
+parseFloat()
+parseFloat("10.5");  // 10.5
+🔹 6. Formatting Numbers
+toFixed()
+
+Rounds to fixed decimal places.
+
+let num = 12.3456;
+console.log(num.toFixed(2)); // "12.35"
+toPrecision()
+
+Formats to total digits.
+
+let num = 123.456;
+console.log(num.toPrecision(4)); // "123.5"
+toLocaleString()
+
+Formats based on locale.
+
+let num = 1000000;
+console.log(num.toLocaleString()); // "1,000,000"
+🔹 7. String Operations
+let str = "JavaScript";
+
+console.log(str.length);        // 10
+console.log(str.toUpperCase()); // JAVASCRIPT
+console.log(str.substring(0,4));// Java
+console.log(str.replace("Java", "Type")); // TypeScript
+🔹 8. eval() Function ⚠️
+
+Executes a string as JavaScript code.
+
+eval("console.log(2 + 3)"); // 5
+
+⚠️ Warning: Avoid using eval() due to:
+
+Security risks
+Performance issues
+🔹 9. Quotes (Single vs Double)
+
+Both are valid, used for flexibility.
+
+let str1 = "Hello";
+let str2 = 'World';
+Nesting Example:
+let msg = "He said 'Hello'";
+let msg2 = 'She said "Hi"';
+🔹 10. Initialization
+
+Declaring and assigning value:
+
+let x = 10;        // initialized
+let y;             // declared only
+y = 20;            // assigned later
+🔹 11. Type Conversion (Explicit & Implicit)
+Explicit
+Number("123"); // 123
+String(123);   // "123"
+Boolean(1);    // true
+Implicit (Coercion)
+"5" + 2;  // "52"
+"5" - 2;  // 3
+✅ Summary Table
+Concept	Example
+Number	10, 3.14
+Boolean	true, false
+String	"Hello"
+null	intentional empty
+undefined	not assigned
+typeof	typeof x
+parseInt	"100" → 100
+toFixed	12.345 → 12.35
+
+If you want, I can convert this into a PowerPoint (PPT) for your class with diagrams and exercises.

@@ -1,9 +1,12 @@
 // example 1. Basic Syntax and Usage
 try {
   // Code that might throw an error
-  const data = JSON.parse(someRawData); 
+  const data = JSON.parse(someRawData);
   console.log("Success!");
 } catch (error) {
+
+
+
   // Code to handle the error
   console.error("Parsing failed:", error.message);
 } finally {
