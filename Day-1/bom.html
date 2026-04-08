@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<p id="windowdemo"></p>
+<p id="screendemo"></p>
+<p id="screenavaildemo"></p>
+<script> 
+// The width/height of the content area (the viewport).
+let w = window.innerWidth;
+let h = window.innerHeight;
+
+// The total width/height of the user's physical monitor.
+let sh = screen.height;
+let sw = screen.width;
+
+// screen.availWidth / availHeight: The width/height available on the screen, excluding system taskbars.
+let sah = screen.availHeight;
+let saw = screen.availWidth;
+
+document.getElementById("windowdemo").innerHTML = "Width: " + w + "<br>Height: " + h;
+document.getElementById("screendemo").innerHTML = "Screen Width: " + sw + "<br>Screen Height: " + sh;
+document.getElementById("screenavaildemo").innerHTML = "Screen available Width: " + saw + "<br>Screen available Height: " + sah;
+</script>
+
+</body>
+</html>
