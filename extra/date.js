@@ -33,3 +33,4 @@ const diff = date2 - date1; // Difference in milliseconds
 // Useful Methods
 const timestamp2 = now.getTime(); // Milliseconds since epoch
 const utcString = now.toUTCString(); // UTC format
+//
