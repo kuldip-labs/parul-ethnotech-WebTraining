@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Declaration Examples in JavaScript</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .output { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+    h1 { color: #333; }
+    h2 { color: #666; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Variable Declaration Examples in JavaScript</h1>
+  
+  <h2>1. VAR - Function scoped</h2>
+  <div class="output" id="var-output"></div>
+  
+  <h2>2. LET - Block scoped</h2>
+  <div class="output" id="let-output"></div>
+  
+  <h2>3. CONST - Block scoped</h2>
+  <div class="output" id="const-output"></div>
+  
+  <h2>Scope Demonstration</h2>
+  <div class="output" id="scope-output"></div>
+
+  <script>
+    let output = "";
+
+    // 1. VAR - Function scoped, can be redeclared and reassigned
+    var name = "John";
+    var name = "Jane";
+    name = "Bob";
+    output += "var name: " + name + "<br>";
+
+    var age = 25;
+    output += "var age: " + age + "<br>";
+    document.getElementById("var-output").innerHTML = output;
+
+    // 2. LET - Block scoped, cannot be redeclared but can be reassigned
+    output = "";
+    let country = "USA";
+    country = "Canada";
+    output += "let country: " + country + "<br>";
+
+    let city = "New York";
+    output += "let city: " + city + "<br>";
+    document.getElementById("let-output").innerHTML = output;
+
+    // 3. CONST - Block scoped, cannot be redeclared or reassigned
+    output = "";
+    const PI = 3.14159;
+    output += "const PI: " + PI + "<br>";
+
+    const MAX_USERS = 100;
+    output += "const MAX_USERS: " + MAX_USERS + "<br>";
+
+    const person = { firstName: "Alice", lastName: "Smith" };
+    person.firstName = "Alicia";
+    output += "const person (modified): " + JSON.stringify(person) + "<br>";
+
+    const numbers = [1, 2, 3];
+    numbers.push(4);
+    output += "const numbers (modified): " + JSON.stringify(numbers) + "<br>";
+    document.getElementById("const-output").innerHTML = output;
+
+    // Scope Demonstration
+    output = "";
+    function scopeExample() {
+      var funcVar = "function scoped";
+      let blockLet = "block scoped";
+      const blockConst = "block scoped";
+      
+      if (true) {
+        var funcVar = "redeclared in block";
+        let blockLet = "new block scoped";
+        const blockConst = "new block scoped";
+        output += "Inside if - var: " + funcVar + "<br>";
+        output += "Inside if - let: " + blockLet + "<br>";
+        output += "Inside if - const: " + blockConst + "<br>";
+      }
+      
+      output += "Outside if - var: " + funcVar + "<br>";
+      output += "Outside if - let: " + blockLet + "<br>";
+      output += "Outside if - const: " + blockConst + "<br>";
+    }
+
+    scopeExample();
+    document.getElementById("scope-output").innerHTML = output;
+  </script>
+</body>
+</html>
