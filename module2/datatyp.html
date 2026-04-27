@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Data Types</title></head>
+<body style="font-family:sans-serif;padding:24px;background:#f8f9fa">
+<h2>Check Data Types</h2>
+<button onclick="checkTypes()"
+style="padding: 8px 20px; background:#f7df1e;border:none;
+border-radius:6px;cursor:pointer;font-weight:700;font-size:lrem">
+Click
+</button>
+<div id="output" style="margin-top:16px; line-height:2.2;font-size:0.95rem"></div>
+<script>
+
+function checkTypes() {
+let name = "Aman";
+let age = 22;
+let isStudent = true;
+let empty = null;
+let colors = ["red", "green", "blue"];
+let person = { name: "Aman", age: 22 };
+const row = (label, val) => `<b>${label}</b> <code>typeof</code> <b style="color:#e07b00">${typeof val}</b><br>`;
+document.getElementById("output").innerHTML =
+row("name", name) +
+row("age", age) +
+row("isStudent", isStudent) +
+row("null", empty) +
+row("colors []", colors) +
+row("person {}", person);
+}
+
+</script>
+</body>
+</html>
